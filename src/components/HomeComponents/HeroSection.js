@@ -8,7 +8,6 @@ const HeroSection = () => {
         <div className='heroMain'>
             <h1>You Bring Problems.<br/>We Provide Solutions.</h1>
         </div>
-        
     </div>
   )
 }

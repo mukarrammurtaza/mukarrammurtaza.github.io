@@ -1,6 +1,9 @@
+.setGreen{
+    color: var(--green);
+}
 div.section{
     padding: calc(var(--paddingStandard)*2);
-    /* border: 1px solid var(--green); */
+    border: 1px solid var(--green);
 }
 div.heroSection{
     display: flex;
@@ -27,7 +30,97 @@ aside.heroAside{
 div.heroMain h1{
     font-size: calc(var(--fontSizeStandard)*4);
 }
-@media screen and (max-width: 560px){
+
+/* section2 */
+div.sectionCaseStudies{
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--flexGap)*.6);
+}
+aside.csAside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.csAside p{
+    text-align: center;
+    width: 9rem;
+    font-weight: var(--fontWeightBold);
+}
+.csAside h2{
+    padding: var(--paddingChild);
+    font-size: calc(var(--fontSizeStandard)*2.25);
+}
+div.csCarasol{
+    display: flex;
+    overflow-x: scroll;
+    gap: var(--flexGap);
+    padding-inline: 16rem 19rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    transition: all 0.5s ease-in-out;
+}
+div.csCarasol::-webkit-scrollbar {
+    display: none;
+}
+div.csCarasolItem{
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+div.csCarasolItem img{
+    width: 47rem;
+    aspect-ratio: 16/10;
+    object-position: center;
+    object-fit: cover;
+    border-radius: .2rem;
+}
+div.csCarasolItem div.itemInfo{
+    padding: 1rem;
+}
+.itemInfo p{
+    opacity: 40%;
+    font-weight: var(--fontWeightSemiBold);
+}
+.itemInfo h3{
+    font-size: calc(var(--fontSizeStandard)*1.4);
+}
+
+
+
+
+/* Our Capabilities */
+div.sectionCapabilities{
+}
+aside.ocAside{
+    align-items: center;
+    overflow: hidden;
+}
+aside.ocAside p{
+    font-size: calc(var(--fontSizeStandard)*6);
+    font-weight: 100;
+    transform: translateY(100%);
+    line-height: 1rem;
+}
+
+
+
+
+
+
+@media screen and (max-width: 860px){
+    div.csCarasolItem img{
+        width: 30rem;
+    }
+    div.csCarasol{
+        padding-inline: 10rem;
+    }
+}
+@media screen and (max-width: 565px){
+    div.csCarasol{
+        width: 80vw;
+    }
     div.heroSection{
         flex-direction: column-reverse;
         gap: calc(var(--flexGap)*1);
@@ -42,5 +135,22 @@ div.heroMain h1{
     .heroAside svg{
         stroke-width: 1;
         transform: rotate(90deg);
+    }
+    div.sectionCaseStudies{
+        align-items: center;
+    }
+    div.csCarasolItem img{
+        width: 22rem;
+    }
+    div.csCarasol{
+        padding-inline: 1rem;
+    }
+}
+@media screen and (max-width: 430px){
+    div.csCarasolItem img{
+        width: 20rem;
+    }
+    div.csCarasol{
+        padding-inline: 2rem;
     }
 }
