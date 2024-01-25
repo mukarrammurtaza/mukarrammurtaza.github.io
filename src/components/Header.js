@@ -1,8 +1,13 @@
-import React from 'react'
+import CrootiveLogo from './HeaderComponents/CrootiveLogo';
+import Navigation from './HeaderComponents/Navigation';
+
 
 const Header = () => {
   return (
-    <header>Header</header>
+    <header>
+      <CrootiveLogo/>
+      <Navigation/>
+    </header>
   )
 }
 
