@@ -10,11 +10,20 @@ a.colorlessLink{
 ul.noListStyle{
   list-style: none;
 }
+.clickable{
+  cursor: pointer;
+}
 :root{
   /* colors */
-  --black:#161a1b;
+  /* --black:#161a1b;
   --white:#ECEDED;
-  --green:#2a898d;
+  --green:#2a898d; */
+  --black: rgb(22, 26, 27);
+  --blackOpac50: rgb(46, 49, 49);
+  --white: rgb(236, 237, 237);
+  --whiteOpac50: rgba(236, 237, 237, 0.5);
+  --green: rgb(42, 137, 141);
+  --greenOpac50: rgba(42, 138, 141, 0.5);
 
   /* font */
   --fontFamilyStandard: 'Montserrat', sans-serif;
@@ -67,12 +76,11 @@ header nav ul.navigationList{
 header nav ul.navigationList li{
   font-weight: var(--fontWeightStandard);
   font-size: calc(var(--fontSizeStandard)*1.05);
-  /* padding: var(--paddingChild); */
   margin: var(--marginStandard);
-  border-bottom: 2px solid var(--green);
+  border-bottom: 2px solid transparent;
 }
 header nav ul.navigationList li.active{
-  border-bottom: 1px solid var(--green);
+  border-bottom: 2px solid var(--green);
 }
 
 
@@ -82,22 +90,21 @@ label.navigationListHamburger{
 label .menu {
   position: absolute;
   right: 25px;
-  top: 22px;
+  top: 21px;
   width: 53px;
   height: 49px;
-  /* padding: 1.7rem; */
   border-radius: 50% 50% 50% 50%;
-  -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+  box-shadow: 2px 2px 20px black;
   cursor: pointer;
   border-radius: 10%;
-  border: 2px solid var(--green);
+  border: 2px solid var(--green);  
+  background-color: rgb(255 255 255 / 30%);
 }
 label .hamburger {
   position: absolute;
-  top: 23px;
-  left: 10px;
+  top: 22px;
+  right: 9px;
   width: 30px;
   height: 2px;
   background: var(--white);
@@ -143,6 +150,9 @@ label input:checked + .menu .hamburger:before {
   top: 0;
 }
 @media (max-width:520px) {
+  ::root{
+    --flexGap:10rem;
+  }
   header nav ul.navigationList{
     display: none;
   }
@@ -158,8 +168,79 @@ label input:checked + .menu .hamburger:before {
 
 /* main */
 main.bodyContent{
-  margin-inline: calc(var(--marginStandard)*2);
+  padding-inline: calc(var(--marginStandard)*2);
+  /* background-color: var(--black);
+  margin-bottom: 25rem; */
 }
+
+
+/* footer */
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  padding: var(--paddingChild);
+  transition: all 0.3s ease;
+  border-top: 1px solid var(--white);
+  background-color:  rgb(44, 43, 43);
+  /* position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -100; */
+}
+.footerBottom{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-block: 2vh;
+  text-align: center;
+  gap:1rem;
+  color: var(--white);
+  margin-inline: 2vw;
+}
+.rulesLinks{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5vw;
+  justify-content:space-evenly;
+}
+.footerTop{
+  display: flex;
+  width: 92%;
+  background-color: var(--grey2);
+  padding: 1.5rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-self: center;
+}
+.brandFooter{
+  font-family: var(--textFont);
+  color: var(--colorWhite);
+}
+.footerLiItems{
+  display: flex;
+  flex-direction:column;
+  gap:0.5rem;
+  margin-block: 1.3rem;
+  color: var(--colorWhite);
+}
+.footerLiItems > *{
+  cursor:pointer;
+}
+.footerDet > h3{
+  color: var(--colorWhite);
+}
+.footerDet{
+  margin-top: 3.3rem;
+}
+.footerDet:nth-child(1){
+  margin-top: unset;
+}
+
+
 @media(max-width: 1024px) {
   html{
     font-size: 95%;

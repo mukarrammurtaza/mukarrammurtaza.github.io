@@ -1,9 +1,15 @@
+.bodyContent{
+    --maxWithHome: 48rem;
+}
 .setGreen{
     color: var(--green);
 }
+.crootiveName{
+    text-decoration: underline;
+}
 div.section{
     padding: calc(var(--paddingStandard)*2);
-    border: 1px solid var(--green);
+    /* border: 1px solid var(--green); */
 }
 div.heroSection{
     display: flex;
@@ -19,7 +25,7 @@ aside.heroAside{
     gap: calc(var(--flexGap)*.9);
     width: 7%;
     min-width: 57px;
-    height: 32rem;
+    height: 29rem;
 }
 .heroAside svg{
     min-width:5rem;
@@ -31,7 +37,7 @@ div.heroMain h1{
     font-size: calc(var(--fontSizeStandard)*4);
 }
 
-/* section2 */
+/* Case Studies */
 div.sectionCaseStudies{
     display: flex;
     flex-direction: column;
@@ -45,17 +51,18 @@ aside.csAside{
 .csAside p{
     text-align: center;
     width: 9rem;
+    margin-right: 3rem;
     font-weight: var(--fontWeightBold);
 }
 .csAside h2{
     padding: var(--paddingChild);
-    font-size: calc(var(--fontSizeStandard)*2.25);
+    font-size: calc(var(--fontSizeStandard)*2.8);
 }
 div.csCarasol{
     display: flex;
     overflow-x: scroll;
     gap: var(--flexGap);
-    padding-inline: 16rem 19rem;
+    padding-inline: 22rem 19rem;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     transition: all 0.5s ease-in-out;
@@ -70,7 +77,7 @@ div.csCarasolItem{
     scroll-snap-stop: always;
 }
 div.csCarasolItem img{
-    width: 47rem;
+    width: var(--maxWithHome);
     aspect-ratio: 16/10;
     object-position: center;
     object-fit: cover;
@@ -79,35 +86,151 @@ div.csCarasolItem img{
 div.csCarasolItem div.itemInfo{
     padding: 1rem;
 }
-.itemInfo p{
+p.fadeItemText{
     opacity: 40%;
     font-weight: var(--fontWeightSemiBold);
 }
 .itemInfo h3{
     font-size: calc(var(--fontSizeStandard)*1.4);
+    margin-block: var(--marginChild);
 }
 
 
 
 
 /* Our Capabilities */
-div.sectionCapabilities{
-}
 aside.ocAside{
     align-items: center;
     overflow: hidden;
+    margin-block: calc(var(--marginChild)*5);
 }
 aside.ocAside p{
     font-size: calc(var(--fontSizeStandard)*6);
+    color: var(--green);
     font-weight: 100;
     transform: translateY(100%);
     line-height: 1rem;
 }
+ul.ocList{
+    display: flex;
+    flex-direction: column;
+    margin-block: calc(var(--marginChild)*8);
+    margin-inline: auto;
+    max-width: var(--maxWithHome);
+}
+ul.ocList li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(var(--fontSizeStandard)*1.8);
+    padding: calc(var(--paddingStandard)*2);
+    font-weight: var(--fontWeightSemiBold);
+    border-top: 2px solid var(--greenOpac50);
+    transition: all 0.2s ease-in-out;
+}
+ul.ocList li:nth-last-child(1){
+    border-bottom: 2px solid var(--greenOpac50);
+}
+ul.ocList li:hover{
+    background-color: var(--blackOpac50);
+    cursor: pointer;
+}
 
 
 
+/* experience */
+div.exInformation{
+    display: flex;
+    flex-direction: row;
+    margin-inline: auto;
+    flex-wrap: wrap;
+    max-width: calc(var(--maxWithHome));
+    margin-block: calc(var(--marginChild)*8);
+    gap: calc(var(--flexGap)*.5);
+}
+aside.exAside{
+    margin-block: calc(var(--marginChild)*5);
+}
+p.exYears{
+    font-size: calc(var(--fontSizeStandard)*5);
+    font-weight: calc(var(--fontWeightBold) + 50);
+}
+p.exInfo{
+    font-size: calc(var(--fontSizeStandard)*1.8);
+    font-weight: var(--fontWeightStandard);
+    min-width: 18rem;
+}
 
-
+/* Get in thouch */
+aside.gtAside{
+    margin-block: calc(var(--marginChild)*7);
+}
+aside.gtAside p{
+    text-align: unset;
+}
+form.gtForm{
+    margin-inline: auto;
+    margin-block: calc(var(--marginChild)*14);
+    max-width: var(--maxWithHome);
+}
+.gtForm div.gtInputsContainer{
+    display: flex;
+    flex-direction: column;
+}
+.input-container{
+	position:relative;
+    min-width: 15rem;   
+    margin-block: calc(var(--marginStandard)*2);
+}
+.input-container .label-n{
+	position:absolute;
+	top:-8px;
+	left:0px;
+	font-size:calc(var(--fontSizeStandard)*1.5);
+    color: var(--whiteOpac50);
+	transition: all 0.5s ease-in-out;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:2px solid var(--white); 
+  transition: all 0.5s ease; 
+  background:transparent;
+  width:100%;
+  padding:8px 1rem 5px 1rem;
+  font-size:calc(var(--fontSizeStandard)*1.3);
+  color: var(--white);
+  text-wrap: wrap;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:3px solid var(--green);	
+}
+.input-container input:focus ~ .label-n,
+.input-container input:valid ~ .label-n{
+	top:-12px;
+	font-size:12px;
+}
+.sendButton{
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: calc(var(--flexGap)*.2);
+    font-size: calc(var(--fontSizeStandard)*2);
+    margin-left: auto;
+}
+.sendButton svg{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.5);
+}
+.sendButton:hover svg{
+    stroke: var(--green);
+    transform: scale(2);
+} 
 
 @media screen and (max-width: 860px){
     div.csCarasolItem img{
@@ -115,6 +238,19 @@ aside.ocAside p{
     }
     div.csCarasol{
         padding-inline: 10rem;
+    }
+    .csAside p{
+        width: 8rem;
+        margin-right: 2rem;
+    }
+    p.exYears{
+        font-size: calc(var(--fontSizeStandard)*4);
+        /* font-weight: calc(var(--fontWeightBold) + 50); */
+    }
+    p.exInfo{
+        font-size: calc(var(--fontSizeStandard)*1.5);
+        font-weight: var(--fontWeightStandard);
+        /* min-width: 20rem; */
     }
 }
 @media screen and (max-width: 565px){
@@ -145,6 +281,16 @@ aside.ocAside p{
     div.csCarasol{
         padding-inline: 1rem;
     }
+    .csAside p{
+        width: 7rem;
+        margin-right: 1rem;
+    }
+    .csAside h2{
+        font-size: calc(var(--fontSizeStandard)*2);
+    }
+    ul.ocList li{
+        font-size: calc(var(--fontSizeStandard)*1.2);
+    }
 }
 @media screen and (max-width: 430px){
     div.csCarasolItem img{
@@ -152,5 +298,9 @@ aside.ocAside p{
     }
     div.csCarasol{
         padding-inline: 2rem;
+    }
+    .csAside p{
+        width: 6rem;
+        margin-right: 1rem;
     }
 }

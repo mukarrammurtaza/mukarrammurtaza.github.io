@@ -1,35 +1,44 @@
 const CaseStudiesSection = () => {
-  return (
-    <div className='section sectionCaseStudies'>
+    // Array of objects representing data for each csCarasolItem
+    const caseStudiesData = [
+      {
+        imageUrl: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        itemText: "HRMS",
+        itemCompany: "Swift Delivery",
+      },
+      {
+        imageUrl: "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        itemText: "PROMO PAGE",
+        itemCompany: "Polestar",
+      },
+      {
+        imageUrl: "https://images.pexels.com/photos/574073/pexels-photo-574073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        itemText: "PROMO PAGE",
+        itemCompany: "Polestar",
+      },
+    ];
+  
+    return (
+      <div className='section sectionCaseStudies'>
         <aside className='csAside'>
-            <p>1 <span className='setGreen'>&mdash;</span> 5 &nbsp;</p>
-            <h2>Case Studies</h2>
+          <p>1 <span className='setGreen'>&mdash;</span> 5 &nbsp;</p>
+          <h2>Case Studies</h2>
         </aside>
         <div className='csCarasol'>
-            <div className='csCarasolItem'>
-                <img src="https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Item1" />
-                <div className='itemInfo'>
-                    <p className='itemText'>PROMO PAGE</p>
-                    <h3 className='itemCompany'>Polestar</h3>
-                </div>
+          {/* Using map to iterate over the array and generate JSX for each item */}
+          {caseStudiesData.map((item, index) => (
+            <div key={index} className='csCarasolItem'>
+              <img src={item.imageUrl} alt={`Item${index + 1}`} />
+              <div className='itemInfo'>
+                <p className='fadeItemText'>{item.itemText}</p>
+                <h3 className='itemCompany'>{item.itemCompany}</h3>
+              </div>
             </div>
-            <div className='csCarasolItem'>
-                <img src="https://images.pexels.com/photos/17279340/pexels-photo-17279340/free-photo-of-close-up-of-a-silver-rim-on-a-matte-black-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Item1" />
-                <div className='itemInfo'>
-                    <p className='itemText'>PROMO PAGE</p>
-                    <h3 className='itemCompany'>Polestar</h3>
-                </div>
-            </div>
-            <div className='csCarasolItem'>
-                <img src="https://images.pexels.com/photos/17279340/pexels-photo-17279340/free-photo-of-close-up-of-a-silver-rim-on-a-matte-black-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Item1" />
-                <div className='itemInfo'>
-                    <p className='itemText'>PROMO PAGE</p>
-                    <h3 className='itemCompany'>Polestar</h3>
-                </div>
-            </div>
+          ))}
         </div>
-    </div>
-  )
-}
-
-export default CaseStudiesSection
+      </div>
+    );
+  }
+  
+  export default CaseStudiesSection;
+  

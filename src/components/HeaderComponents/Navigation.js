@@ -14,7 +14,7 @@ const Navigation = () => {
     <nav>
       <ul className="noListStyle navigationList">
         {items.map((item, index) => (
-          <li key={index}><Link className='colorlessLink' to={`/${item.link}`}>{item.link}</Link></li>
+          <li key={index} className='active'><Link className='colorlessLink' to={`/${item.link}`}>{item.link}</Link></li>
         ))}
       </ul>
 
