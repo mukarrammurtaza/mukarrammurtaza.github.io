@@ -8,17 +8,16 @@
     overflow: hidden;
 }
 .blurSvgContainer svg{
-    transform: translate(30%, 0);
     filter: blur(100px);
     opacity: 50%;
-    animation: svgBlur 200s ease-in-out infinite alternate;
+    animation: svgBlur 150s ease-in-out infinite alternate;
 }
 @keyframes svgBlur{
     0%{
-        transform:rotate(0deg);
+        transform:rotate(0deg) translate(30%, 0%);
     }
     100%{
-        transform:rotate(360deg);
+        transform:rotate(360deg) translate(60%, 40%);
     }
 }
 .bodyContent{

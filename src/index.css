@@ -16,6 +16,10 @@ ul.noListStyle{
 .root{
   position: relative;
 }
+::selection{
+  background-color: var(--green);
+  filter: invert(100%);
+}
 :root{
   /* colors */
   /* --black:#161a1b;
