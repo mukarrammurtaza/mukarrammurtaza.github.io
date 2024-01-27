@@ -62,7 +62,7 @@ header{
   color: var(--white);
   display: flex;
   align-items:center;
-  gap: var(--flexGap);
+  gap: calc(var(--flexGap)*.5);
 }
   /* header > CrootiveLogo */
 span.crootiveLogoContainer{

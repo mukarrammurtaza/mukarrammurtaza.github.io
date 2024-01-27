@@ -5,14 +5,16 @@ import ImageParallel from './../components/HomeComponents/ImageParallel';
 import ExperienceSection from './../components/HomeComponents/ExperienceSection';
 import GetInTouchSection from './../components/HomeComponents/GetInTouchSection';
 import './../styles/Home.css'
+import ImageHero from './../components/HomeComponents/ImageHero';
 
 const Home = () => {
   return (
     <main className="bodyContent">
+      {/* <ImageHero/> */}
       <HeroSection/>
       <CaseStudiesSection/>
       <OurCapabilitiesSection/>
-      <ImageParallel/>
+      {/* <ImageParallel/> */}
       <ExperienceSection/> 
       <GetInTouchSection/>
     </main>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const items = [{ link: "Home" }, { link: "Case Studies" }];
+const items = [{ link: "Home" }, { link: "Work" }, { link: "Contact" }];
 
 const Navigation = () => {
 
@@ -14,7 +14,8 @@ const Navigation = () => {
     <nav>
       <ul className="noListStyle navigationList">
         {items.map((item, index) => (
-          <li key={index} className='active'><Link className='colorlessLink' to={`/${item.link}`}>{item.link}</Link></li>
+          // use 'active' for active li
+          <li key={index} className=''><Link className='colorlessLink' to={`/${item.link}`}>{item.link}</Link></li>
         ))}
       </ul>
 

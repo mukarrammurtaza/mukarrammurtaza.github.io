@@ -7,6 +7,15 @@
     z-index: -2;
     overflow: hidden;
 }
+.heroImage{
+    position: absolute;
+    top: -5%;
+    right: 5%;
+    height: 25rem;
+    width: 25rem;
+    background-color: var(--green);
+    border-radius: .3rem;
+}
 .blurSvgContainer svg{
     filter: blur(100px);
     opacity: 50%;
@@ -62,9 +71,11 @@ aside.heroAside{
 div.heroMain h1{
     margin-left: 0.5rem;
     max-width: 30rem;
+    font-size: calc(var(--fontSizeStandard)*3);
+    margin-bottom: 1.1rem;
 }
 .heroMainHead{
-    font-size: calc(var(--fontSizeStandard)*4.5);
+    font-size: calc(var(--fontSizeStandard)*5.5);
 }
 
 /* Case Studies */
@@ -181,7 +192,13 @@ ul.ocList li:hover{
     cursor: pointer;
 }
 
-
+/* image */
+.scrollBackgroundImage{
+    background-color: var(--green);
+    margin-inline: auto;
+    width: 70vw;
+    height: 20rem;
+}
 
 /* experience */
 div.exInformation{
@@ -295,6 +312,14 @@ form.gtForm{
         font-size: calc(var(--fontSizeStandard)*1.5);
         font-weight: var(--fontWeightStandard);
         /* min-width: 20rem; */
+    }
+}
+@media screen and (max-width: 640px){
+    div.heroMain h1{
+        font-size: calc(var(--fontSizeStandard)*2.3);
+    }
+    .heroMainHead{
+        font-size: calc(var(--fontSizeStandard)*4.7);
     }
 }
 @media screen and (max-width: 565px){
