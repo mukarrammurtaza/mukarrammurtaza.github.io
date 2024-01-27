@@ -9,39 +9,39 @@ const Footer = () => {
     <footer className="footer">
       <section className="footerTop">
         <div className="footerDet">
-          <Link to={"/"} className="colorlessLink">
             <CrootiveLogo />
-          </Link>
           <ul className="footerLiItems noListStyle">
+            
+          <li>
             <Link to="mailto:crootive@gmail.com?" className="colorlessLink">
-              <li>
                 <i className="fa-brands fa-google"></i>&nbsp;&nbsp; Email
-              </li>
+              
             </Link>
+            </li>
+              <li>
             <Link
               to={"https://www.linkedin.com/company/crootive-co/about/"}
               className="colorlessLink"
             >
-              <li>
                 <i className="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;
                 Linkedin
-              </li>
             </Link>
+              </li>
+              <li>
             <Link
               to={
                 "https://www.instagram.com/crootive?igshid=MzRlODBiNWFlZA%3D%3D"
               }
               className="colorlessLink"
             >
-              <li>
                 <i className="fa-brands fa-instagram"></i>&nbsp;&nbsp; Instagram
-              </li>
             </Link>
-            <Link to={"https://api.whatsapp.com"} className="colorlessLink">
+              </li>
               <li>
+            <Link to={"https://api.whatsapp.com"} className="colorlessLink">
                 <i className="fa-brands fa-whatsapp"></i>&nbsp;&nbsp; Whatsapp
-              </li>
             </Link>
+              </li>
           </ul>
         </div>
         <div className="footerDet">

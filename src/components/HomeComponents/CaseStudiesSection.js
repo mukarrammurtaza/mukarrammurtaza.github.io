@@ -25,10 +25,11 @@ const CaseStudiesSection = () => {
           <h2>Case Studies</h2>
         </aside>
         <div className='csCarasol'>
-          {/* Using map to iterate over the array and generate JSX for each item */}
           {caseStudiesData.map((item, index) => (
             <div key={index} className='csCarasolItem'>
-              <img src={item.imageUrl} alt={`Item${index + 1}`} />
+              <div className='csImgContainer'>
+                <img src={item.imageUrl} alt={item.itemCompany} />
+              </div>
               <div className='itemInfo'>
                 <p className='fadeItemText'>{item.itemText}</p>
                 <h3 className='itemCompany'>{item.itemCompany}</h3>

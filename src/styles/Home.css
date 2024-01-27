@@ -10,14 +10,14 @@
 .blurSvgContainer svg{
     filter: blur(100px);
     opacity: 50%;
-    animation: svgBlur 150s ease-in-out infinite alternate;
+    animation: svgBlur 120s ease-in-out infinite alternate;
 }
 @keyframes svgBlur{
     0%{
         transform:rotate(0deg) translate(30%, 0%);
     }
     100%{
-        transform:rotate(360deg) translate(60%, 40%);
+        transform:rotate(270deg) translate(60%, 40%);
     }
 }
 .bodyContent{
@@ -64,7 +64,7 @@ div.heroMain h1{
     max-width: 30rem;
 }
 .heroMainHead{
-    font-size: calc(var(--fontSizeStandard)*4);
+    font-size: calc(var(--fontSizeStandard)*4.5);
 }
 
 /* Case Studies */
@@ -108,10 +108,14 @@ div.csCarasolItem{
 }
 div.csCarasolItem img{
     width: var(--maxWithHome);
-    aspect-ratio: 16/10;
+    aspect-ratio: 18/10;
     object-position: center;
     object-fit: cover;
     border-radius: .2rem;
+    transition: transform 0.2s ease-in-out;
+}
+.csImgContainer:hover img{
+    transform: scale(1.01);
 }
 div.csCarasolItem div.itemInfo{
     padding: 1rem;
@@ -148,7 +152,7 @@ ul.ocList{
     margin-inline: auto;
     max-width: var(--maxWithHome);
 }
-ul.ocList li{
+ul.ocList li > .ocHead{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -157,6 +161,16 @@ ul.ocList li{
     padding: calc(var(--paddingStandard)*2);
     font-weight: var(--fontWeightSemiBold);
     border-top: 2px solid var(--greenOpac50);
+}
+ul.ocList li > .ocHead svg{
+    min-width: 1rem;
+}
+ul.ocList li > .ocDescription{
+    padding: calc(var(--paddingStandard)*2);
+    font-size: calc(var(--fontSizeStandard)*1.5);
+    font-weight: var(--fontWeightStandard);
+}
+ul.ocList li{
     transition: all 0.2s ease-in-out;
 }
 ul.ocList li:nth-last-child(1){
@@ -284,9 +298,6 @@ form.gtForm{
     }
 }
 @media screen and (max-width: 565px){
-    div.csCarasol{
-        width: 80vw;
-    }
     div.heroSection{
         flex-direction: column-reverse;
         gap: calc(var(--flexGap)*1);
@@ -308,8 +319,11 @@ form.gtForm{
     div.csCarasolItem img{
         width: 22rem;
     }
+    /* div.csCarasolItem img:nth-child(1){
+        margin-left: 10vw;
+    } */
     div.csCarasol{
-        padding-inline: 1rem;
+        width: 80vw;
     }
     .csAside p{
         width: 7rem;
@@ -323,6 +337,9 @@ form.gtForm{
     }
 }
 @media screen and (max-width: 430px){
+    .heroMainHead{
+        font-size: calc(var(--fontSizeStandard)*4);
+    }
     div.csCarasolItem img{
         width: 20rem;
     }

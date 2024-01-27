@@ -1,19 +1,55 @@
+import React, { useState } from 'react';
+import PlusSvg from './PlusSvg';
 
 const OurCapabilitiesSection = () => {
-  return (
-    <div className='section sectionOurCapabilities'>
-        <aside className='csAside ocAside'>
-            <p>*</p>
-            <h2>Our Capabilities</h2>
-        </aside>
-        <ul className='noListStyle ocList'>
-            <li><p>UX & Product Design</p><svg className='clickable' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></li>
-            <li><p>Product Development</p><svg className='clickable' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></li>
-            <li><p>Award-winning web design</p><svg className='clickable' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></li>
-            <li><p>Communication design</p><svg className='clickable' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></li>
-        </ul>
-    </div>
-  )
-}
+  const [openIndex, setOpenIndex] = useState(null);
 
-export default OurCapabilitiesSection
+  const capabilities = [
+    { 
+      title: 'UX & Product Design', 
+      description: 'Crafting user experiences that leave a lasting impression. Our designs focus on simplicity, functionality, and elegance.' 
+    },
+    { 
+      title: 'Product Development', 
+      description: 'Turning ideas into reality. From conceptualization to delivery, we handle every step of the product development process.' 
+    },
+    { 
+      title: 'Award-winning Design', 
+      description: 'Recognized for excellence. Our designs have received awards for their innovation, creativity, and impact on the user experience.' 
+    },
+    { 
+      title: 'Communication Design', 
+      description: 'Effective visual communication. We specialize in conveying your message through compelling and visually appealing design elements.' 
+    },
+  ];
+
+  const handleLiClick = (index) => {
+    setOpenIndex(index === openIndex ? null : index);
+  };
+
+  return (
+    <div className="section sectionOurCapabilities">
+      <aside className="csAside ocAside">
+        <p>*</p>
+        <h2>Our Capabilities</h2>
+      </aside>
+      <ul className="noListStyle ocList">
+        {capabilities.map((capability, index) => (
+          <li key={index} onClick={() => handleLiClick(index)} className={index === openIndex ? 'liOpen': ''}>
+            <div className="ocHead" >
+              <p>{capability.title}</p>
+              <PlusSvg />
+            </div>
+            {openIndex === index && (
+              <div className='ocDescription' >
+                {capability.description !== null ? capability.description : "no description found"}
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default OurCapabilitiesSection;

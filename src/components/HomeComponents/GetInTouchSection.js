@@ -29,20 +29,24 @@ const GetInTouchSection = () => {
           <div className="input-container">
             <input
               type="email"
+              id="email-input"
               required
               onChange={usernameHandler}
               value={username}
+              aria-label="Your Business Email"
             />
-            <label className="label-n">Your Business Email</label>
+            <label className="label-n" htmlFor='email-input'>Your Business Email</label>
           </div>
           <div className="input-container">
             <input
               type="text"
+              id="message-input"
               required
               onChange={messageHandler}
               value={messageText}
+              aria-label="Your Idea"
             />
-            <label className="label-n">Your Idea</label>
+            <label className="label-n" htmlFor='message-input'>Your Idea</label>
           </div>
         </div>
           <button type="submit" className="sendButton clickable">

@@ -18,7 +18,7 @@ ul.noListStyle{
 }
 ::selection{
   background-color: var(--green);
-  filter: invert(100%);
+  color: var(--white);
 }
 :root{
   /* colors */
@@ -266,7 +266,7 @@ main.bodyContent{
 }
 @media(max-width: 300px) {
   html{
-    font-size: 70%;
+    font-size: 68%;
   }
   label .menu {
     transform: scale(0.8);
