@@ -9,12 +9,23 @@
 }
 .heroImage{
     position: absolute;
-    top: -5%;
+    top: 18%;
     right: 5%;
-    height: 25rem;
-    width: 25rem;
+    height: 75vh;
+    width: 30vw;
+    min-width: 18rem;
     background-color: var(--green);
     border-radius: .3rem;
+    z-index: -1;
+}
+.heroImage img{
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+    min-width: 18rem;
+    border-radius: .3rem;
+    opacity: 0.8;
+    mix-blend-mode:darken;
 }
 .blurSvgContainer svg{
     filter: blur(100px);

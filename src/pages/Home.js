@@ -10,7 +10,7 @@ import ImageHero from './../components/HomeComponents/ImageHero';
 const Home = () => {
   return (
     <main className="bodyContent">
-      {/* <ImageHero/> */}
+      <ImageHero/>
       <HeroSection/>
       <CaseStudiesSection/>
       <OurCapabilitiesSection/>
