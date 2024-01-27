@@ -95,10 +95,10 @@ label .menu {
   height: 49px;
   border-radius: 50% 50% 50% 50%;
   transition: .5s ease-in-out;
-  box-shadow: 2px 2px 20px black;
   cursor: pointer;
   border-radius: 10%;
   /* border: 2px solid var(--green);  
+  box-shadow: 2px 2px 20px black;
   background-color: rgb(255 255 255 / 30%); */
 }
 label .hamburger {
