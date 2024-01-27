@@ -60,8 +60,8 @@ header{
   /* header > CrootiveLogo */
 span.crootiveLogoContainer{
   padding: var(--paddingChild);
-  font-size: calc(var(--fontSizeStandard)*2);
-  font-weight: var(--fontWeightBold);
+  font-size: calc(var(--fontSizeStandard)*2.05);
+  font-weight: calc(var(--fontWeightBold) + 70);
   letter-spacing: var(--letterSpacingStandard);
 }
 span.crootiveColorLetter{
