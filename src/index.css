@@ -13,6 +13,9 @@ ul.noListStyle{
 .clickable{
   cursor: pointer;
 }
+.root{
+  position: relative;
+}
 :root{
   /* colors */
   /* --black:#161a1b;
@@ -90,16 +93,13 @@ label.navigationListHamburger{
 label .menu {
   position: absolute;
   right: 25px;
-  top: 21px;
+  top: 22.5px;
   width: 53px;
   height: 49px;
   border-radius: 50% 50% 50% 50%;
   transition: .5s ease-in-out;
   cursor: pointer;
   border-radius: 10%;
-  /* border: 2px solid var(--green);  
-  box-shadow: 2px 2px 20px black;
-  background-color: rgb(255 255 255 / 30%); */
 }
 label .hamburger {
   position: absolute;
