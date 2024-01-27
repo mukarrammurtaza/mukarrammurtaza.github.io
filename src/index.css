@@ -98,13 +98,13 @@ label .menu {
   box-shadow: 2px 2px 20px black;
   cursor: pointer;
   border-radius: 10%;
-  border: 2px solid var(--green);  
-  background-color: rgb(255 255 255 / 30%);
+  /* border: 2px solid var(--green);  
+  background-color: rgb(255 255 255 / 30%); */
 }
 label .hamburger {
   position: absolute;
-  top: 22px;
-  right: 9px;
+  top: 24px;
+  right: 11px;
   width: 30px;
   height: 2px;
   background: var(--white);
