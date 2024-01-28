@@ -15,7 +15,7 @@ const Home = () => {
       <CaseStudiesSection/>
       <OurCapabilitiesSection/>
       {/* <ImageParallel/> */}
-      <ExperienceSection/> 
+      <ExperienceSection/>
       <GetInTouchSection/>
     </main>
   )

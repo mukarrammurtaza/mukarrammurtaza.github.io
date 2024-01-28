@@ -9,10 +9,10 @@
 }
 .heroImage{
     position: absolute;
-    top: 18%;
-    right: 5%;
-    height: 75vh;
-    width: 30vw;
+    top: -1%;
+    right: 10vw;
+    height: 30rem;
+    width: 30rem;
     min-width: 18rem;
     background-color: var(--green);
     border-radius: .3rem;
@@ -41,7 +41,7 @@
     }
 }
 .bodyContent{
-    --maxWithHome: 48rem;
+    --maxWithHome: 57rem;
     background-color: transparent;
 }
 .setGreen{
@@ -58,18 +58,19 @@ div.heroSection{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: calc(var(--flexGap)*.5);
+    /* gap: calc(var(--flexGap)*1.2); */
 }
 aside.heroAside{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    gap: calc(var(--flexGap)*1);
+    gap: calc(var(--flexGap)*1.3);
     width: 7%;
     min-width: 3.5rem;
     height: 27rem;
     margin-left: 1.2rem;
+    margin-right: 6.2vw;
     width: 7rem;
 }
 .heroAside svg{
@@ -82,11 +83,11 @@ aside.heroAside{
 div.heroMain h1{
     margin-left: 0.5rem;
     max-width: 30rem;
-    font-size: calc(var(--fontSizeStandard)*3);
+    font-size: calc(var(--fontSizeStandard)*3.2);
     margin-bottom: 1.1rem;
 }
 .heroMainHead{
-    font-size: calc(var(--fontSizeStandard)*5.5);
+    font-size: calc(var(--fontSizeStandard)*6);
 }
 
 /* Case Studies */
@@ -99,16 +100,17 @@ aside.csAside{
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* gap: calc(var(--flexGap)*.7); */
 }
 .csAside p{
     text-align: center;
     width: 7rem;
-    margin-right: 3.75rem;
+    margin-right: 7.5vw;
     font-weight: var(--fontWeightBold);
 }
 .csAside h2{
     padding: var(--paddingChild);
-    font-size: calc(var(--fontSizeStandard)*2.8);
+    font-size: calc(var(--fontSizeStandard)*3.2);
 }
 div.csCarasol{
     display: flex;
@@ -161,10 +163,10 @@ aside.ocAside{
     margin-block: calc(var(--marginChild)*5);
 }
 aside.ocAside p{
-    font-size: calc(var(--fontSizeStandard)*6);
+    font-size: calc(var(--fontSizeStandard)*4);
     color: var(--green);
     font-weight: 100;
-    transform: translateY(100%);
+    transform: translateY(80%);
     line-height: 1rem;
 }
 ul.ocList{
@@ -180,28 +182,34 @@ ul.ocList li > .ocHead{
     align-items: center;
     justify-content: space-between;
     font-size: calc(var(--fontSizeStandard)*1.8);
-    padding: calc(var(--paddingStandard)*2);
+    padding-block: calc(var(--paddingStandard)*2);
     font-weight: var(--fontWeightSemiBold);
     border-top: 2px solid var(--greenOpac50);
 }
 ul.ocList li > .ocHead svg{
     min-width: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+ul.ocList li:hover > .ocHead svg{
+    stroke: var(--green);
+    transform: rotate(90deg);
 }
 ul.ocList li > .ocDescription{
-    padding: calc(var(--paddingStandard)*2);
+    padding-block: calc(var(--paddingStandard)*2);
     font-size: calc(var(--fontSizeStandard)*1.5);
     font-weight: var(--fontWeightStandard);
 }
 ul.ocList li{
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;   
+    cursor: pointer;
 }
 ul.ocList li:nth-last-child(1){
     border-bottom: 2px solid var(--greenOpac50);
 }
-ul.ocList li:hover{
+/* ul.ocList li:hover{
     background-color: var(--blackOpac50);
-    cursor: pointer;
-}
+ 
+} */
 
 /* image */
 .scrollBackgroundImage{
@@ -240,6 +248,8 @@ aside.gtAside{
 }
 aside.gtAside p{
     text-align: unset;
+    padding-inline: var(--paddingChild);
+    transform: translateX(7%);
 }
 form.gtForm{
     margin-inline: auto;
@@ -304,7 +314,11 @@ form.gtForm{
     transform: scale(2);
 } 
 
+
 @media screen and (max-width: 860px){
+    .heroImage{
+        display: none;
+    }
     div.csCarasolItem img{
         width: 30rem;
     }
@@ -313,7 +327,8 @@ form.gtForm{
     }
     .csAside p{
         width: 8rem;
-        margin-right: 2rem;
+        /* margin-right: 2rem; */
+        margin-right: 7vw;
     }
     p.exYears{
         font-size: calc(var(--fontSizeStandard)*4);
