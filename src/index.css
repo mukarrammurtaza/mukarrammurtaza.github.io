@@ -173,7 +173,7 @@ label input:checked + .menu .hamburger:before {
 
 /* main */
 main.bodyContent{
-  padding-inline: calc(var(--marginStandard)*2);
+  /* padding-inline: calc(var(--marginStandard)*2); */
   /* background-color: var(--black);
   margin-bottom: 25rem; */
 }
