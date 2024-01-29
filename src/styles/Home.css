@@ -241,6 +241,7 @@ div.exInformation{
     max-width: calc(var(--maxWithHome));
     margin-block: calc(var(--marginChild)*8);
     gap: calc(var(--flexGap)*.5);
+    min-width: 16rem;
     /* margin-left: 7.5vw;
     padding-left: calc(var(--paddingChild) + 7rem); */
 }
@@ -435,5 +436,8 @@ form.gtForm{
     .csAside p{
         width: 6rem;
         margin-right: 1rem;
+    }
+    .ocAside p{
+        width: min-content;
     }
 }
