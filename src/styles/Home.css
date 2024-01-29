@@ -178,6 +178,7 @@ ul.ocList{
     margin-block: calc(var(--marginChild)*8);
     margin-inline: auto;
     max-width: var(--maxWithHome);
+    min-width: 18rem;
     /* margin-left: 7.5vw;
     padding-left: calc(var(--paddingChild) + 7rem); */
 }
@@ -223,12 +224,12 @@ ul.ocList li:nth-last-child(1){
     padding-inline: 0;
     width: 100%;
     height: 20rem;
+    margin-block: calc(var(--marginChild)*5);
 }
 .scrollBackgroundImage img{
     object-fit: cover;
     width: 100%;
     height: 100%;
-
 }
 
 /* experience */
@@ -349,7 +350,6 @@ form.gtForm{
         padding-left: calc(var(--paddingChild) + 7rem);
     }
 }
-
 @media screen and (max-width: 860px){
     .heroImage{
         display: none;
