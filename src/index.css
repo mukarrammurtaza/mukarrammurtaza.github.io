@@ -54,6 +54,24 @@ body{
   min-height: 100%;
   width: 100%;
 }
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+body::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+body::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid var(--green);
+  background-color: var(--black);
+}
+body::-webkit-scrollbar-track { 
+  background-color:var(--greenOpac50); 
+  border-radius: 8px; 
+} 
 
 /* header */
 header{
@@ -171,12 +189,6 @@ label input:checked + .menu .hamburger:before {
 
 
 
-/* main */
-main.bodyContent{
-  /* padding-inline: calc(var(--marginStandard)*2); */
-  /* background-color: var(--black);
-  margin-bottom: 25rem; */
-}
 
 
 /* footer */
