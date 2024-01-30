@@ -21,7 +21,7 @@ const Home = () => {
 
   const [csRef, csInView] = useInView({
     triggerOnce: false,
-    threshold: 0.3,
+    threshold: 0.5,
   });
   const [ocRef, ocInView] = useInView({
     triggerOnce: false,
@@ -49,6 +49,7 @@ const Home = () => {
       },
     },
   };
+  
   const heroVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
