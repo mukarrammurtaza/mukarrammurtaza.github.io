@@ -1,12 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import CrootiveLogo from "./HeaderComponents/CrootiveLogo";
 
 const Footer = () => {
   const [year] = React.useState(new Date().getFullYear());
+  const [Ref, InView] = useInView({
+    triggerOnce: false,
+  });
+  const sectionVariants = {
+    hidden: { opacity: 0, y : 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        delay: 0.5,
+      },
+    },
+  };
 
   return (
-    <footer className="footer">
+    <motion.footer className="footer"
+    variants={sectionVariants}
+    initial="hidden"
+    animate={InView ? "visible" : "hidden"}
+    ref={Ref}
+    >
       <section className="footerTop">
         <div className="footerDet">
             <CrootiveLogo />
@@ -76,7 +99,7 @@ const Footer = () => {
           </Link>
         </span>
       </section>
-    </footer>
+    </motion.footer>
   );
 };
 

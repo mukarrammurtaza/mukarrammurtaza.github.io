@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import BackgroundBlurSvg from "./components/HomeComponents/BackgroundBlurSvg";
 import { Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import PDFviewer from "./components/HomeComponents/PDFviewer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <AnimatePresence>
       <Routes>
         <Route index element={<Home />}/>
+        <Route path={"/Login"} element={<PDFviewer />} />
       </Routes>
       </AnimatePresence>
       <Footer />

@@ -62,13 +62,10 @@ const OurCapabilitiesSection = () => {
         <p>*</p>
         <h2>Our Capabilities</h2>
       </aside>
-      <motion.ul className="noListStyle ocList"
-        variants={container}
-        initial="hidden"
-        animate={csInView ? "visible" : "hidden"} 
+      <ul className="noListStyle ocList"
       >
         {capabilities.map((capability, index) => (
-          <motion.li key={index} variants={itemAnim} onClick={() => handleLiClick(index)} className={index === openIndex ? 'liOpen': ''}>
+          <li key={index} onClick={() => handleLiClick(index)} className={index === openIndex ? 'liOpen': ''}>
             <div className="ocHead" >
               <p>{capability.title}</p>
               <PlusSvg />
@@ -78,9 +75,9 @@ const OurCapabilitiesSection = () => {
                 {capability.description !== null ? capability.description : "no description found"}
               </div>
             )}
-          </motion.li>
+          </li>
         ))}
-      </motion.ul>
+      </ul>
     </div>
   );
 };

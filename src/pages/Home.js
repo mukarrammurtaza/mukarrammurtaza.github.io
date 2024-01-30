@@ -16,17 +16,9 @@ const Home = () => {
   const { scrollYProgress } = useScroll({
     target: scrollRef,
   })
-  const position = useTransform(scrollYProgress, [0, 0.05 , 0.09,  1], [ 500, 400, 350, 0])
   const positionParralelImg = useTransform(scrollYProgress, [0, 0.05 , 0.09,  1], [ -500, -450, -420, 0])
 
-  const [csRef, csInView] = useInView({
-    triggerOnce: false,
-    threshold: 0.5,
-  });
-  const [ocRef, ocInView] = useInView({
-    triggerOnce: false,
-    threshold: 0.1,
-  });
+
   const [exRef, exInView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -37,32 +29,19 @@ const Home = () => {
   });
 
   const sectionVariants = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, y : 50 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 30,
-        delay: 0.2,
+        damping: 10,
+        delay: 0.5,
       },
     },
   };
   
-  const heroVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 30,
-        delay: 1,
-      },
-    },
-  };
 
   return (
     <motion.main
@@ -71,33 +50,11 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <ImageHero position={position}/>
-
-      <motion.div variants={heroVariants} initial="hidden" animate="visible">
-        <HeroSection />
-      </motion.div>
-
-      <motion.div
-        variants={sectionVariants}
-        initial="hidden"
-        animate={csInView ? "visible" : "hidden"}
-        ref={csRef}
-      >
-        <CaseStudiesSection position={position}/>
-      </motion.div>
-
-      <motion.div
-        variants={sectionVariants}
-        initial="hidden"
-        animate={ocInView ? "visible" : "hidden"}
-        ref={ocRef}
-      >
-        <OurCapabilitiesSection />
-      </motion.div>
-
-      <motion.div variants={sectionVariants} initial="hidden" animate="visible">
-        <ImageParallel position={positionParralelImg}/>
-      </motion.div>
+      <ImageHero />
+      <HeroSection />
+      <CaseStudiesSection />
+      <OurCapabilitiesSection />
+      <ImageParallel position={positionParralelImg}/>
 
       <motion.div
         variants={sectionVariants}
@@ -116,6 +73,7 @@ const Home = () => {
       >
         <GetInTouchSection />
       </motion.div>
+      
     </motion.main>
   );
 };

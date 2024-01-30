@@ -1,8 +1,11 @@
 import React from 'react'
+import PDFviewer from './../components/HomeComponents/PDFviewer';
 
 const OurWork = () => {
   return (
-    <div>OurWork</div>
+    <div>
+      <PDFviewer/>
+    </div>
   )
 }
 
