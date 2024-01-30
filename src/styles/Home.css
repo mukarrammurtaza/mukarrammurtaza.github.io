@@ -233,8 +233,6 @@ ul.ocList li:nth-last-child(1){
     margin-block: calc(var(--marginChild)*5);
     overflow: hidden;
 }
-.scrollBackgroundImage img{
-}
 
 /* experience */
 div.exInformation{
@@ -254,8 +252,12 @@ aside.exAside{
     margin-block: calc(var(--marginChild)*5);
 }
 p.exYears{
-    font-size: calc(var(--fontSizeStandard)*5);
+    font-size: calc(var(--fontSizeStandard)*6);
+    line-height: 4.5rem;
     font-weight: calc(var(--fontWeightBold) + 50);
+}
+p.exYears span{
+    font-size: calc(var(--fontSizeStandard)*3);
 }
 p.exInfo{
     font-size: calc(var(--fontSizeStandard)*1.6);

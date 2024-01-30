@@ -18,7 +18,7 @@ const Footer = () => {
         type: "spring",
         stiffness: 100,
         damping: 10,
-        delay: 0.5,
+        delay: 0.3,
       },
     },
   };

@@ -1,34 +1,8 @@
 import React from 'react';
 import PlusSvg from './PlusSvg';
-import { useInView } from "react-intersection-observer";
-import { motion } from 'framer-motion';
 
 const OurCapabilitiesSection = () => {
 
-  const [csRef, csInView] = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
-  });
-
-  const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.2
-      }
-    }
-  };
-  
-    const itemAnim = {
-    hidden: { x: -40, opacity: 0 },
-    visible: {  
-      x: 0,
-      opacity: 1
-    }
-  };
 
   const [openIndex, setOpenIndex] = React.useState(null);
 
@@ -56,8 +30,7 @@ const OurCapabilitiesSection = () => {
   };
 
   return (
-    <div className="section sectionOurCapabilities" 
-    ref={csRef}    >
+    <div className="section sectionOurCapabilities" >
       <aside className="csAside ocAside">
         <p>*</p>
         <h2>Our Capabilities</h2>
