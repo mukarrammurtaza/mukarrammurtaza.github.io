@@ -10,20 +10,21 @@
 .heroImage{
     position: absolute;
     top: 1%;
-    right: 10vw;
-    height: 35rem;
-    width: 35rem;
+    right: 2vw;
+    height: 40rem;
+    width: 40rem;
     min-width: 18rem;
     border-radius: .3rem;
     z-index: -1;
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
 }
 .heroImage svg{
     width: inherit;
     height: inherit;
     min-width: 18rem;
     border-radius: .3rem;
-    animation: animSvg 120s ease-in-out infinite alternate;
+    animation: animSvg 120s ease ;
 }
 @keyframes animSvg {
     0%{

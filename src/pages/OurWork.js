@@ -1,11 +1,14 @@
 import React from 'react'
-import PDFviewer from './../components/HomeComponents/PDFviewer';
+import DocumentViewer from './../components/OurWorkComponents/DocumentViewer';
+import WorkSwiftDelivery from './../components/OurWorkComponents/WorkSwiftDelivery';
+
 
 const OurWork = () => {
   return (
-    <div>
-      <PDFviewer/>
-    </div>
+    <main className='OurWorkContent'>
+      <DocumentViewer/>
+      <WorkSwiftDelivery/>
+    </main>
   )
 }
 

@@ -1,8 +1,10 @@
+import SwiftImg from '../../assets/SwiftImg.JPG'
+
 const CaseStudiesSection = () => {
     // Array of objects representing data for each csCarasolItem
     const caseStudiesData = [
       {
-        imageUrl: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        imageUrl: SwiftImg,
         itemText: "HRMS",
         itemCompany: "Swift Delivery",
       },
