@@ -147,9 +147,10 @@ div.csCarasolItem img{
     object-fit: cover;
     border-radius: .2rem;
     transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 .csImgContainer:hover img{
-    transform: scale(1.01);
+    transform: scale(.995);
 }
 div.csCarasolItem div.itemInfo{
     padding-block: 1rem;
@@ -211,6 +212,18 @@ ul.ocList li > .ocDescription{
     padding-block: calc(var(--paddingStandard)*2);
     font-size: calc(var(--fontSizeStandard)*1.5);
     font-weight: var(--fontWeightStandard);
+    /* animation: ocDes 0.4s ease; */
+}
+@keyframes ocDes {
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        height: 5rem;
+        opacity: 100%;
+    }
+    
 }
 ul.ocList li{
     transition: all 0.2s ease-in-out;   
@@ -341,6 +354,53 @@ form.gtForm{
 } 
 
 
+
+.owContent{
+    --maxWithWork: 59vw;
+    margin-top: calc(var(--marginChild)*8);
+    margin-bottom: calc(var(--marginChild)*16);
+}
+.owHeader{
+    text-align: center;
+    margin: calc(var(--marginStandard)*2);
+}
+.owSection{
+    padding: calc(var(--paddingStandard)*2);
+    margin-inline: calc(var(--marginStandard)*2);
+    font-size: calc(var(--fontSizeStandard)*1.18);
+    max-width: 75vw !important;
+    min-width: 18rem;
+    margin-inline: auto;
+}
+.sdList{
+    padding-left: 2rem;
+    list-style:inside;
+}
+.sdObjective{
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: var(--fontWeightSemiBold);
+}
+.owImages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-inline: auto;
+    max-width: var(--maxWithWork);
+    justify-content: space-evenly;
+    row-gap: calc(var(--flexGap)*.5);
+    margin-block: calc(var(--marginChild)*8);
+    flex-wrap: wrap;
+}
+.owImages img{
+    width: 25rem;
+    border-radius: .2rem;
+}
+
+
+
+
+
 @media screen and (min-width:860px) {
     form.gtForm{
         margin-left: 7.5vw;
@@ -357,6 +417,11 @@ form.gtForm{
     div.csCarasol{
         margin-left: 7.5vw;
         padding-left: calc(var(--paddingChild) + 7rem);
+    }
+    .owSection{
+        margin-left: 7.7vw;
+        padding-left: calc(var(--paddingChild) + 11rem);
+        max-width: var(--maxWithWork);
     }
 }
 @media screen and (max-width: 860px){

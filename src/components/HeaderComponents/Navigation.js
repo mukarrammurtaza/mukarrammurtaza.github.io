@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   
-const items = [{ link: "Home" }, { link: "Work" }, { link: "Contact" }];
+const items = [{ name: "Home", link: '/' }, { name: "Work", link: '/' }, { name: "Contact", link: '/' }];
 
 
   const [isChecked, setIsChecked] = React.useState(false);
@@ -21,7 +21,7 @@ const items = [{ link: "Home" }, { link: "Work" }, { link: "Contact" }];
       <ul className="noListStyle navigationList">
         {items.map((item, index) => (
           // use 'active' for active li
-          <li key={index} ><Link className='colorlessLink' to={`/${item.link}`}>{item.link}</Link></li>
+          <li key={index} ><Link className='colorlessLink' to={`${item.link}`}>{item.name}</Link></li>
         ))}
       </ul>
 

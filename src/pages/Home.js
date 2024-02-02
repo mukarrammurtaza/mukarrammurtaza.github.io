@@ -52,7 +52,7 @@ const Home = () => {
     >
       <ImageHero />
       <HeroSection />
-      <CaseStudiesSection />
+      <CaseStudiesSection/>
       <OurCapabilitiesSection />
       <ImageParallel position={positionParralelImg}/>
 
