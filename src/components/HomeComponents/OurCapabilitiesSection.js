@@ -16,10 +16,6 @@ const OurCapabilitiesSection = () => {
     };
 
     window.addEventListener('resize', handleResize);
-    if(viewportWidth < 565){
-      // setElementHeight(40);
-    }
-    console.log(viewportWidth)
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -50,7 +46,7 @@ const OurCapabilitiesSection = () => {
   const sectionVariants = {
     hidden: {  height : "15vh" },
     visible: {
-      height: viewportWidth < 610 ? '50vh': '35vh' ,
+      height: viewportWidth < 610 ? '50vh': '32vh' ,
       transition: {
         type: "linear",
         duration: 0.2,
@@ -66,7 +62,7 @@ const OurCapabilitiesSection = () => {
         type: "linear",
         stiffness: 100,
         damping: 20,
-        delay: 0.4,
+        delay: 0.2,
       },
     },
   };
