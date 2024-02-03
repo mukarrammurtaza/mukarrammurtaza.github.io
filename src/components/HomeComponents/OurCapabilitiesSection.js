@@ -1,26 +1,10 @@
 import React from 'react';
-import { MotionConfig, motion } from 'framer-motion';
 import PlusSvg from './PlusSvg';
 
 const OurCapabilitiesSection = () => {
 
 
   const [openIndex, setOpenIndex] = React.useState(null);  
-  const [viewportWidth, setViewportWidth] = React.useState(window.innerWidth);
-  // const ocRef = React.useRef(null);
-  // const [elementHeight, setElementHeight] = React.useState(0);
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      setViewportWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [window.innerWidth]);
-
   const capabilities = [
     {
       title: 'UX & Product Design',
@@ -42,33 +26,10 @@ const OurCapabilitiesSection = () => {
 
   const handleLiClick = (index) => {
     setOpenIndex(index === openIndex ? null : index);
-  };
-  const sectionVariants = {
-    hidden: {  height : "15vh" },
-    visible: {
-      height: viewportWidth < 610 ? '50vh': '32vh' ,
-      transition: {
-        type: "linear",
-        duration: 0.2,
-      },
-    },
-  };
-  const ocVariants = {
-    hidden: { opacity: 0, y : -50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "linear",
-        stiffness: 100,
-        damping: 20,
-        delay: 0.2,
-      },
-    },
+    console.log(openIndex, index);
   };
 
   return (
-    <MotionConfig transition={{ duration: 1 }}>
     <div className="section sectionOurCapabilities" >
       <aside className="csAside ocAside">
         <p>*</p>
@@ -77,29 +38,20 @@ const OurCapabilitiesSection = () => {
       <ul className="noListStyle ocList"
       >
         {capabilities.map((capability, index) => (
-          <motion.li key={index} onClick={() => handleLiClick(index)} className={index === openIndex ? 'liOpen': ''}
-          variants={sectionVariants}
-          initial="hidden"
-          animate={index === openIndex ? "visible" : "hidden"}
+          <li key={index} onClick={() => handleLiClick(index)} className={index === openIndex ? 'liOpen': ''}
           >
             <div className="ocHead" >
               <p>{capability.title}</p>
               <PlusSvg />
             </div>
-            {openIndex === index && (
-              <motion.div className='ocDescription'
-              variants={ocVariants}
-              initial="hidden"
-              animate={index === openIndex ? "visible" : "hidden"}
+              <div className='ocDescription'
               >
-                {capability.description !== null ? capability.description : "no description found"}
-              </motion.div>
-            )}
-          </motion.li>
+                <p>{capability.description !== null ? capability.description : "no description found"}</p>
+              </div>
+          </li>
         ))}
       </ul>
     </div>
-    </MotionConfig>
   );
 };
 

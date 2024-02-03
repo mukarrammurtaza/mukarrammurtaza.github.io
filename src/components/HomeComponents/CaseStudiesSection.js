@@ -29,7 +29,7 @@ const CaseStudiesSection = () => {
           <p>1 <span className='setGreen'>&mdash;</span> 5 &nbsp;</p>
           <h2>Case Studies</h2>
         </aside>
-        <div className='csCarasol'>
+        <div className='csCarasol' >
           {caseStudiesData.map((item, index) => (
             <div key={index} className='csCarasolItem'>
               <Link to={item.link} className='csImgContainer'>
@@ -42,6 +42,8 @@ const CaseStudiesSection = () => {
             </div>
           ))}
         </div>
+          {/* <button className='buttons' onClick={()=>{}}>&gt;</button>
+          <button className='buttons' onClick={()=>{}}>&lt;</button> */}
       </div>
     );
   }

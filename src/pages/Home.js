@@ -16,7 +16,7 @@ const Home = () => {
   const { scrollYProgress } = useScroll({
     target: scrollRef,
   })
-  const positionParralelImg = useTransform(scrollYProgress, [0, 0.05 , 0.09,  1], [ -500, -450, -420, 0])
+  const positionParralelImg = useTransform(scrollYProgress, [0, 0.6 , 0.9,  1], [ 1000, 500, 100, 0])
 
 
   const [exRef, exInView] = useInView({
