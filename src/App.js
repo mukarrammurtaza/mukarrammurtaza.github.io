@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route index element={<Home />}/>
         <Route path={"/Work/:case"} element={<OurWork />} />
-        <Route path={"/industry"} element={<Industry />} />
+        {/* <Route path={"/industry"} element={<Industry />} /> */}
       </Routes>
       </AnimatePresence>
       <Footer />

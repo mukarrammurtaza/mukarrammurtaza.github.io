@@ -3,9 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 const Navigation = () => {
   const items = [
     { name: "Home", link: '/' },
-    // { name: "Work", link: '#work' }, 
-    // { name: "Contact", link: '#contact' },
-    { name: "Industry", link: '/industry' }
+    { name: "Work", link: '#work' }, 
+    { name: "Contact", link: '#contact' },
+    { name: "Industry", link: '#industry' }
   ];
 
   const location = useLocation();

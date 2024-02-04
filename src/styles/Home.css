@@ -186,15 +186,15 @@ div.csCarasolItem img {
     position: relative;
 }
 .csImgContainer:hover .linkArrow {
-    transform: scale(3.2);
+    transform: scale(2.8);
     color: var(--white);
 }
 svg.linkArrow {
     z-index: 1;
     position: absolute;
-    right: 4%;
-    top: 6%;
-    transform: scale(3.5);
+    right: 3%;
+    top: 5%;
+    transform: scale(2.5);
     transition: all 0.3s ease;
     color: var(--blackOpac50);
 }
@@ -296,7 +296,7 @@ ul.ocList li.liOpen .ocDescription {
 
 /* image */
 .scrollBackgroundImage {
-    /* background-color: var(--black); */
+    background-color: var(--black);
     margin-inline: 0;
     padding-inline: 0;
     width: 100%;
@@ -456,7 +456,7 @@ form.gtForm {
 
 
 .inContent{
-    --maxWithWork: 70vw;
+    --maxWithWork: 63vw;
     margin-top: calc(var(--marginChild) * 8);
     margin-bottom: calc(var(--marginChild) * 16);
 }

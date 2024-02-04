@@ -2,12 +2,13 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import DynamicHtmlCreator from './../components/OurWorkComponents/DynamicHtmlCreator';
 import '../styles/Home.css';
+import csSW1 from './../assets/csSW1.jpeg';
+import csSW2 from './../assets/csSW2.jpeg';
 import { useParams } from 'react-router-dom';
 
 const OurWork = () => {
 
   const params = useParams();
-  console.log(params.case)
 
   const htmlBeforeImages = [
     ["h2", "Overview", "sdHead"],
@@ -45,16 +46,16 @@ const OurWork = () => {
   ];
 
   return (
-    <motion.main className='owContent' 
+    <motion.main className='owContent'
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     >
-      <h1 className='owHeader'>Case Study: HRMS For {params.case}</h1>
+    <h1 className='owHeader'>Case Study: HRMS For {params.case}</h1>
     <DynamicHtmlCreator elements={htmlBeforeImages} />
     <div className='owImages'>
-      <img src="https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&w=600" alt="alt" />
-      <img src="https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&w=600" alt="alt" />
+      <img src={csSW1} alt="alt" />
+      <img src={csSW2} alt="alt" />
     </div>
     <DynamicHtmlCreator elements={htmlAfterImages} />
     </motion.main>

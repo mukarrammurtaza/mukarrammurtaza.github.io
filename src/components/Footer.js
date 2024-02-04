@@ -46,7 +46,7 @@ const Footer = () => {
               to={"https://www.linkedin.com/company/crootive-co/about/"}
               className="colorlessLink"
             >
-                <i className="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;
+                <i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;
                 Linkedin
             </Link>
               </li>
@@ -61,7 +61,7 @@ const Footer = () => {
             </Link>
               </li>
               <li>
-            <Link to={"https://api.whatsapp.com"} className="colorlessLink">
+            <Link to={"https://wa.me/97433135751"} className="colorlessLink">
                 <i className="fa-brands fa-whatsapp"></i>&nbsp;&nbsp; Whatsapp
             </Link>
               </li>
