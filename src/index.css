@@ -105,10 +105,11 @@ header nav ul.navigationList li{
   font-weight: var(--fontWeightStandard);
   font-size: calc(var(--fontSizeStandard)*1.05);
   margin: var(--marginStandard);
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
 }
 header nav ul.navigationList li.active{
-  border-bottom: 2px solid var(--green);
+  border-bottom: 3px solid var(--green);
 }
 
 

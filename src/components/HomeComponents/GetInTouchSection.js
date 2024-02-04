@@ -19,7 +19,7 @@ const GetInTouchSection = () => {
   };
 
   return (
-    <div className="section gtSection">
+    <div className="section gtSection" >
       <aside className="csAside gtAside">
         <p>Tell about yourself and the project</p>
         <h2>Get in touch</h2>

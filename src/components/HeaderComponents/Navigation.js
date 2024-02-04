@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-
-
-
-
+import { Link, useLocation } from 'react-router-dom';
 const Navigation = () => {
-  
-const items = [{ name: "Home", link: '/' }, { name: "Work", link: '/' }, { name: "Contact", link: '/' }];
+  const items = [
+    { name: "Home", link: '/' },
+    // { name: "Work", link: '#work' }, 
+    // { name: "Contact", link: '#contact' },
+    { name: "Industry", link: '/industry' }
+  ];
 
-
+  const location = useLocation();
   const [isChecked, setIsChecked] = React.useState(false);
 
   const handleCheckboxChange = () => {
@@ -20,23 +19,26 @@ const items = [{ name: "Home", link: '/' }, { name: "Work", link: '/' }, { name:
     <nav>
       <ul className="noListStyle navigationList">
         {items.map((item, index) => (
-          // use 'active' for active li
-          <li key={index} ><Link className='colorlessLink' to={`${item.link}`}>{item.name}</Link></li>
+          <li key={index} className={location.pathname === item.link ? 'active' : ''}>
+            <Link className='colorlessLink' to={item.link}>
+              {item.name}
+            </Link>
+          </li>
         ))}
       </ul>
 
       <label className='navigationListHamburger'>
-          <input
-            type="checkbox"
-            checked={isChecked}
-            onChange={handleCheckboxChange}
-          />
-          <span className="menu">
-            <span className="hamburger"></span>
-          </span>
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
+        <span className="menu">
+          <span className="hamburger"></span>
+        </span>
       </label>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
