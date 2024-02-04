@@ -4,8 +4,8 @@ const Navigation = () => {
   const items = [
     { name: "Home", link: '/' },
     { name: "Work", link: '#work' }, 
+    { name: "Industry", link: '#industry' },
     { name: "Contact", link: '#contact' },
-    { name: "Industry", link: '#industry' }
   ];
 
   const location = useLocation();
