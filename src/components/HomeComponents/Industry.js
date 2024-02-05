@@ -63,7 +63,7 @@ const Industry = () => {
                   <li key={index} className="inCard">
                     {svgContent}
                     <h2>{industry.name}</h2>
-                    {industry.description}
+                    <p>{industry.description}</p>
                   </li>
                 ))}
               </ul>

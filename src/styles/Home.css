@@ -476,10 +476,10 @@ form.gtForm {
 .inCard{
     display: flex;
     flex-direction: column;
-    height: 15rem;
+    min-height: 15rem;
     min-width: 12rem;
     max-width: 15rem;
-    justify-content: space-evenly;
+    gap: 2rem;
 }
 .carasoulMarqueeContainer{
     position: relative;
@@ -500,7 +500,7 @@ form.gtForm {
     flex-direction: row;
     gap: calc(var(--flexGap) * 1);
     padding-inline: var(--paddingChild);
-    animation: marqueAnim 30s infinite linear;
+    animation: marqueAnim 70s infinite linear;
     cursor: pointer;
 }
 .carasoulContainer:hover .inList{
