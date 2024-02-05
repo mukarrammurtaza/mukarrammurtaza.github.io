@@ -1,6 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
-import "./../../styles/carasoul.css";
+import "./../../styles/Home.css";
 
 
 
@@ -54,8 +53,9 @@ const Industry = () => {
     ];
   
     return (
+      <div className="inContent">
         <div className="inCarasol">
-          <h1>Industry</h1>
+          <h1>Industries</h1>
           <div className="carasoulMarqueeContainer">
             <div className="carasoulContainer">
               <ul className="inList noListStyle">
@@ -78,7 +78,7 @@ const Industry = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </div></div>
     );
   };
 

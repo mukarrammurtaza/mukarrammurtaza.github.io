@@ -4,7 +4,7 @@ const Navigation = () => {
   const items = [
     { name: "Home", link: '/' },
     { name: "Work", link: '#work' }, 
-    { name: "Industry", link: '#industry' },
+    { name: "Industry", link: '#industries' },
     { name: "Contact", link: '#contact' },
   ];
 

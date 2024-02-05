@@ -9,7 +9,8 @@ import ExperienceSection from "./../components/HomeComponents/ExperienceSection"
 import GetInTouchSection from "./../components/HomeComponents/GetInTouchSection";
 import ImageHero from "./../components/HomeComponents/ImageHero";
 import "./../styles/Home.css";
-import Industry from './Industry';
+// import Industry from './Industry';
+import Industry from './../components/HomeComponents/Industry';
 
 const Home = () => {
 
@@ -55,6 +56,7 @@ const Home = () => {
       <HeroSection />
       <CaseStudiesSection/>
       <OurCapabilitiesSection/>
+      {/* <Industry/> */}
       <Industry/>
       <ImageParallel position={positionParralelImg}/>
 
