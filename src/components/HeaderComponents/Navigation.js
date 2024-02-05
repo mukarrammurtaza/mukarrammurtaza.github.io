@@ -19,7 +19,8 @@ const Navigation = () => {
     <nav>
       <ul className="noListStyle navigationList">
         {items.map((item, index) => (
-          <li key={index} className={location.pathname === item.link ? 'active' : ''}>
+          <li key={index} >
+            {/* className={location.pathname === item.link ? 'active' : ''} addthis to make it active*/}
             <Link className='colorlessLink' to={item.link}>
               {item.name}
             </Link>
