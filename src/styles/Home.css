@@ -457,7 +457,8 @@ form.gtForm {
 
 .inContent{
     --maxWithWork: 63vw;
-    margin-top: calc(var(--marginChild) * 8);
+    margin-top: calc(var(--marginChild) * 4);
+    padding-top: calc(var(--marginChild) * 4);
     margin-bottom: calc(var(--marginChild) * 16);
 }
 .inCarasol h1{

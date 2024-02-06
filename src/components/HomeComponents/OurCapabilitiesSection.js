@@ -5,6 +5,11 @@ const OurCapabilitiesSection = () => {
 
 
   const [openIndex, setOpenIndex] = React.useState(null);  
+  const handleLiClick = (index) => {
+    setOpenIndex(index === openIndex ? null : index);
+    console.log(openIndex, index);
+  };
+  //!edit this to extend or alter capabilities
   const capabilities = [
     {
       title: 'UX & Product Design',
@@ -23,11 +28,6 @@ const OurCapabilitiesSection = () => {
       description: 'Effective visual communication. We specialize in conveying your message through compelling and visually appealing design elements.'
     },
   ];
-
-  const handleLiClick = (index) => {
-    setOpenIndex(index === openIndex ? null : index);
-    console.log(openIndex, index);
-  };
 
   return (
     <div className="section sectionOurCapabilities" >

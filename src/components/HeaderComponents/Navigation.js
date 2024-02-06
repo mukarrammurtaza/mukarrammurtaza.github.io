@@ -1,19 +1,25 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-const Navigation = () => {
+const Navigation = ({setMoveToEle}) => {
+
+
+
+
+  //edit items to change navigation bar
   const items = [
-    { name: "Home", link: '/' },
-    { name: "Work", link: '#work' }, 
-    { name: "Industry", link: '#industries' },
-    { name: "Contact", link: '#contact' },
+    { name: "Home", link: 'home' },
+    { name: "Work", link: 'work' }, 
+    { name: "Industry", link: 'industries' },
+    { name: "Contact", link: 'contact' },
   ];
 
-  const location = useLocation();
+
   const [isChecked, setIsChecked] = React.useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
+
+
 
   return (
     <nav>
@@ -21,9 +27,9 @@ const Navigation = () => {
         {items.map((item, index) => (
           <li key={index} >
             {/* className={location.pathname === item.link ? 'active' : ''} addthis to make it active*/}
-            <Link className='colorlessLink' to={item.link}>
+            <button className='noStyleButtons' to={item.link} onClick={()=>{setMoveToEle(item.link)}}>
               {item.name}
-            </Link>
+            </button>
           </li>
         ))}
       </ul>

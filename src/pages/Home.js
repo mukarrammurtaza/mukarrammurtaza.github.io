@@ -9,18 +9,41 @@ import ExperienceSection from "./../components/HomeComponents/ExperienceSection"
 import GetInTouchSection from "./../components/HomeComponents/GetInTouchSection";
 import ImageHero from "./../components/HomeComponents/ImageHero";
 import "./../styles/Home.css";
-// import Industry from './Industry';
 import Industry from './../components/HomeComponents/Industry';
 
-const Home = () => {
+const Home = ({moveToEle, setMoveToEle}) => {
 
+
+  //animations
+  React.useEffect(() => {
+    if(moveToEle === 'home'){
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }else if(moveToEle != null){
+      const offsetTop = document.getElementById(moveToEle).offsetTop;
+      window.scrollTo({
+        top: offsetTop - 70,
+        behavior: 'smooth',
+      });
+    }
+    return () => {
+      setMoveToEle(null);
+    }
+  }
+  , [moveToEle, setMoveToEle]);
+  React.useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }, []);
   const scrollRef = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: scrollRef,
   })
   const positionParralelImg = useTransform(scrollYProgress, [0, 0.6 , 0.9,  1], [ 1000, 500, 100, 0])
-
-
   const [exRef, exInView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -29,7 +52,6 @@ const Home = () => {
     triggerOnce: false,
     threshold: 0.1,
   });
-
   const sectionVariants = {
     hidden: { opacity: 0, y : 50 },
     visible: {
@@ -74,6 +96,7 @@ const Home = () => {
         initial="hidden"
         animate={gtInView ? "visible" : "hidden"}
         ref={gtRef}
+        id={'contact'}
       >
         <GetInTouchSection />
       </motion.div>

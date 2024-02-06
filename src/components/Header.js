@@ -2,11 +2,11 @@ import CrootiveLogo from './HeaderComponents/CrootiveLogo';
 import Navigation from './HeaderComponents/Navigation';
 
 
-const Header = () => {
+const Header = ({setMoveToEle}) => {
   return (
     <header>
       <CrootiveLogo/>
-      <Navigation/>
+      <Navigation setMoveToEle={setMoveToEle}/>
     </header>
   )
 }

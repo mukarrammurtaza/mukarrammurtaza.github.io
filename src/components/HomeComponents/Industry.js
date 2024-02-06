@@ -5,7 +5,7 @@ import "./../../styles/Home.css";
 
 
 const Industry = () => {
-    // Array of objects representing data for each list item
+    //!Array of objects representing data for each list item
     const industriesData = [
       {
         name: "Healthcare",
@@ -53,7 +53,7 @@ const Industry = () => {
     ];
   
     return (
-      <div className="inContent">
+      <div className="inContent" id={'industries'}>
         <div className="inCarasol">
           <h1>Industries</h1>
           <div className="carasoulMarqueeContainer">
@@ -100,4 +100,4 @@ const svgContent = (
     >
       <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
     </svg>
-  );
+);

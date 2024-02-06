@@ -7,11 +7,9 @@ const GetInTouchSection = () => {
   const usernameHandler = (e) => {
     setUsername(e.target.value);
   };
-
   const messageHandler = (e) => {
     setMessageText(e.target.value);
   };
-
   const submissionHandler = (e) => {
     e.preventDefault();
     setUsername("");

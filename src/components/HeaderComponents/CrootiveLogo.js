@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 
 function CrootiveLogo() {
-
-
   const brandName = 'crootive'
   return (
     <span className='crootiveLogoContainer'>

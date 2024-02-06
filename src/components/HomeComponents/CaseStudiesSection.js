@@ -27,11 +27,12 @@ const CaseStudiesSection = () => {
     },
   ];
 
+
+  //!animtions
   const [csRef, csInView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
-
   const carasolItem = {
     hidden: { opacity: 0, x: -200 },
     visible: {
@@ -47,7 +48,7 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <div className="section sectionCaseStudies">
+    <div className="section sectionCaseStudies"  id={'work'}>
       <aside className="csAside">
         <p>
           1 <span className="setGreen">&mdash;</span> 5 &nbsp;

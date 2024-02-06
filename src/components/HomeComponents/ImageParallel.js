@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
-import Img from "../../assets/ParrallelImage.png";
 
 const ImageParallel = ({ position }) => {
   return (
     <motion.div className="scrollBackgroundImage">
-      {/* <motion.img src={Img} alt="parralel" style={{translateY: position}} /> */}
       <motion.svg
       className="scrollSvg"
         xmlns="http://www.w3.org/2000/svg"
